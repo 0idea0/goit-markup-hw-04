@@ -420,11 +420,68 @@ body {
   fill: var(--link-white-color);
 }
 
+/*============== Clients =============*/
+
+.clients-section {
+  display: flex;
+  background-color: var(--link-white-color);
+  align-items: center;
+}
+
+.clients-items {
+  display: flex;
+}
+
+.clients-list-items {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-list-items:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list-icon {
+  width: 106px;
+  height: 60px;
+
+  fill: #afb1b8;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+  fill: var(--accent-color);
+}
+
 /*============== Footer ============*/
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-container-first {
+  margin-right: 70px;
 }
 
 .logo-link-footer {
@@ -477,6 +534,48 @@ body {
   color: var(--accent-color);
 }
 
+.social-link-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--link-white-color);
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-list-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--link-white-color);
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
 /*================= Portfolio===============*/
 
 .filter-btn {
@@ -505,6 +604,13 @@ body {
 
 .filter-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter-item:hover,
+.filter-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  -radius: 4px;
 }
 
 .filter-btn:hover,
@@ -553,7 +659,6 @@ body {
 .project-section-parts {
   padding: 20px 24px;
   display: block;
-  box-sizing: border-box;
 
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
